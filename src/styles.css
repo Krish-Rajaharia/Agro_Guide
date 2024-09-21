@@ -1,0 +1,75 @@
+/* Existing styles for your login form */
+.login-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;  /* Allows pop-up to overlay properly */
+}
+
+.login-header {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  margin-bottom: 20px; /* Adds some space below the image */
+}
+
+.logo-img {
+  max-width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+}
+
+
+/* Popup overlay styling */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);  /* Darken the background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;  /* Ensure it's above everything else */
+}
+
+/* Popup menu styling */
+.popup-menu {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Popup buttons styling */
+.popup-button {
+  background-color: #38bdf8; /* Light blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-button:hover {
+  background-color: #0ea5e9; /* Darker blue on hover */
+}
+
+/* Close button styling */
+.close-popup {
+  margin-top: 20px;
+  background-color: #e11d48; /* Red close button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-popup:hover {
+  background-color: #be123c; /* Darker red on hover */
+}

@@ -1,19 +1,30 @@
-import Header from "./Components/Header";
-import Body from "./Components/Body";
-import Footer from "./Components/Footer";
-import Login from "./Components/Login";
+// src/App.jsx
 
-function App() {
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./Components/Login";
+import InputForm from "./Components/InputForm"; // Import the InputForm
+import MarketPrice from "./Components/MarketPrice"; // Import the MarketPrice page
+import OrderManagement from "./Components/OrderManagement"; // Import the OrderManagement page
+
+const App = () => {
   return (
-    <>
-       <div className="bg-amber-50 min-h-screen px-6 py-3 flex flex-col gap-16 md:px-10 md:py-7 md:justify-between lg:px-16 lg:py-10">
-        <Header/>
-        {/* <Body/> */}
-        <Login/>
-        <Footer/>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        {/* Route for the Login Page */}
+        <Route path="/" element={<Login />} />
+
+        {/* Route for the InputForm Page */}
+        <Route path="/input" element={<InputForm />} />
+
+        {/* Route for Market Price Page for Retailers */}
+        <Route path="/market-price" element={<MarketPrice />} />
+
+        {/* Route for Order Management Page for Retailers */}
+        <Route path="/order-management" element={<OrderManagement />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
